@@ -2,11 +2,17 @@ import React from "react";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 import styles from "./tableCoin.module.css";
+import { RotatingLines } from "react-loader-spinner";
 const Tablecoin = ({ coins, isLoading }) => {
   return (
     <div className={styles.container}>
       {isLoading ? (
-        <p>...loading</p>
+     <RotatingLines
+     width="50px"
+     height="50px"
+     strokeWidth="2"
+     strokeColor="#3874ff"
+   />
       ) : (
         <table className={styles.table}>
           <thead>
